@@ -27,17 +27,27 @@ Before running the application, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/your-repository/yolo-web-app.git
-cd yolo-web-app
+git clone https://github.com/weida9/aigen-project.git
+cd aigen-project
 ```
 
-### 2. Install Dependencies
+### 2. Set Up a Virtual Environment
+
+It is recommended to use a virtual environment to manage dependencies.
+
+```sh
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate    # On Windows
+```
+
+### 3. Install Dependencies
 
 ```sh
 pip install flask opencv-python torch ultralytics
 ```
 
-### 3. Download the YOLO Model
+### 4. Download the YOLO Model
 
 The application uses `yolov8n.pt` (a pre-trained YOLOv8 model). If not already downloaded, use the following command:
 
@@ -71,10 +81,11 @@ This will display the live object detection video feed.
 ## File Structure
 
 ```
-yolo-web-app/
+aigen-project/
 │── main.py           # Flask backend with YOLO object detection
 │── index.html        # Frontend web page for video streaming
 │── requirements.txt  # Dependencies list (optional)
+│── venv/             # Virtual environment directory (if created)
 ```
 
 ## How It Works
